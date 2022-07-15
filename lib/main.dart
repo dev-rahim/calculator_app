@@ -13,22 +13,297 @@ class Calculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'AbhayaLibre'),
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Color(0xFFFF5733),
+          backgroundColor: Color(0xFFAD1457),
           title: Text(
             'CALCULATOR',
-            style: GoogleFonts.bitter(
-              textStyle: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  letterSpacing: .5,
-                  fontSize: 38),
+            style: TextStyle(
+              fontSize: 38.0,
             ),
-            // style: TextStyle(
-            //   fontSize: 38.0,
-            // ),
           ),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Expanded(
+              flex: 2,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '12+2',
+                          style: TextStyle(
+                            fontSize: 38.0,
+                          ),
+                        ),
+                        Text(
+                          '14',
+                          style: TextStyle(
+                            fontSize: 38.0,
+                          ),
+                        ),
+                      ])
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '1',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFAD1457),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFc21850),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '3',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFd81860),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '+',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFe91e63),
+                      alignment: Alignment.center,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '4',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFc21850),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '5',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFd81860),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '6',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFe91e63),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Icon(
+                        Icons.remove,
+                        color: Colors.white,
+                        size: 24.0,
+                      ),
+                      // Text(
+                      //   '-',
+                      //   style: TextStyle(
+                      //     fontSize: 38.0,
+                      //     color: Colors.white,
+                      //   ),
+                      // ),
+                      color: Color(0xFFAD1457),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '7',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFAD1457),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '8',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFc21850),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '9',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFd81860),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Icon(
+                        Icons.clear,
+                        color: Colors.white,
+                        size: 24.0,
+                      ),
+                      // child: Text(
+                      //   '+',
+                      //   style: TextStyle(
+                      //     fontSize: 38.0,
+                      //     color: Colors.white,
+                      //   ),
+                      // ),
+                      color: Color(0xFFe91e63),
+                      alignment: Alignment.center,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '0',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFc21850),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        'C',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFd81860),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        '=',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFe91e63),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      // child: Icon(
+                      //   Icons.remove,
+                      //   color: Colors.white,
+                      //   size: 24.0,
+                      // ),
+                      child: Text(
+                        '/',
+                        style: TextStyle(
+                          fontSize: 38.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Color(0xFFAD1457),
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
