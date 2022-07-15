@@ -11,9 +11,11 @@ class Calculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
+          backgroundColor: Color(0xFFFF5733),
           title: Text(
             'CALCULATOR',
             style: TextStyle(
