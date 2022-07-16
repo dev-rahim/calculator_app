@@ -1,16 +1,21 @@
-
 import 'package:flutter/material.dart';
 
 import 'butons.dart';
 
-class CalculatorSreen extends StatelessWidget {
+class CalculatorSreen extends StatefulWidget {
   const CalculatorSreen({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<CalculatorSreen> createState() => _CalculatorSreenState();
+}
+
+class _CalculatorSreenState extends State<CalculatorSreen> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // APPBAR SECTON START
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color(0xFFAD1457),
@@ -21,9 +26,11 @@ class CalculatorSreen extends StatelessWidget {
           ),
         ),
       ),
+      // APPBAR SECTON START
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          // RESULT OUTPUT SECTION START
           Expanded(
             flex: 2,
             child: Row(
@@ -46,6 +53,9 @@ class CalculatorSreen extends StatelessWidget {
               ],
             ),
           ),
+          // RESULT OUTPUT SECTION START
+          // BUTTONS START HEARE
+          //ROW 1 START
           Expanded(
             flex: 1,
             child: Row(
@@ -69,6 +79,7 @@ class CalculatorSreen extends StatelessWidget {
               ],
             ),
           ),
+          //ROW 2 START
           Expanded(
             flex: 1,
             child: Row(
@@ -96,6 +107,7 @@ class CalculatorSreen extends StatelessWidget {
               ],
             ),
           ),
+          //ROW 3 START
           Expanded(
             flex: 1,
             child: Row(
@@ -123,6 +135,7 @@ class CalculatorSreen extends StatelessWidget {
               ],
             ),
           ),
+          //ROW 4 START
           Expanded(
             flex: 1,
             child: Row(
@@ -146,6 +159,7 @@ class CalculatorSreen extends StatelessWidget {
               ],
             ),
           ),
+          // BUTTONS END HEARE
         ],
       ),
     );
