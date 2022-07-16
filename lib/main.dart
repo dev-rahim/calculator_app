@@ -56,57 +56,21 @@ class Calculator extends StatelessWidget {
               flex: 1,
               child: Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      child: Text(
-                        '1',
-                        style: TextStyle(
-                          fontSize: 38.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      color: Color(0xFFAD1457),
-                      alignment: Alignment.center,
-                    ),
+                  CalButton(
+                    value: '1',
+                    btnColor: Color(0xFFAD1457),
                   ),
-                  Expanded(
-                    child: Container(
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                          fontSize: 38.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      color: Color(0xFFc21850),
-                      alignment: Alignment.center,
-                    ),
+                  CalButton(
+                    value: '2',
+                    btnColor: Color(0xFFc21850),
                   ),
-                  Expanded(
-                    child: Container(
-                      child: Text(
-                        '3',
-                        style: TextStyle(
-                          fontSize: 38.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      color: Color(0xFFd81860),
-                      alignment: Alignment.center,
-                    ),
+                  CalButton(
+                    value: '3',
+                    btnColor: Color(0xFFd81860),
                   ),
-                  Expanded(
-                    child: Container(
-                      child: Text(
-                        '+',
-                        style: TextStyle(
-                          fontSize: 38.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      color: Color(0xFFe91e63),
-                      alignment: Alignment.center,
-                    ),
+                  CalButton(
+                    value: '+',
+                    btnColor: Color(0xFFe91e63),
                   )
                 ],
               ),
@@ -305,6 +269,30 @@ class Calculator extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CalButton extends StatelessWidget {
+  String? value = '';
+  late Color? btnColor;
+  CalButton({this.value, this.btnColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        child: Text(
+          value!,
+          style: TextStyle(
+            fontSize: 38.0,
+            color: Colors.white,
+          ),
+        ),
+        // color: Color(0xFFAD1457),
+        color: btnColor,
+        alignment: Alignment.center,
       ),
     );
   }
